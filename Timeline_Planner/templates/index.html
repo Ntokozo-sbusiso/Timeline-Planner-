@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timeline Planner</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h2>Timeline Planner</h2>
+        <h3>Upload Module CSV</h3>
+        <p>Plan your modules or curriculum effortlessly.  Upload your CSV, and our Timeline Planner calculates</p>
+        <p>start and end dates, taking holidays and weekends into account</p>
+
+    </div>
+    
+    <div class="user_guide">
+        <a href="/user-guide"><button>View User Guide</button></a>
+    </div>
+    
+    <div class="table-container">
+        <form method="POST" action="/upload" enctype="multipart/form-data">
+        <label>Modules CSV:</label>
+        <input type="file" name="modules_file" required><br><br>
+
+        <label>Holidays CSV (optional):</label>
+        <input type="file" name="holidays_file"><br><br>
+
+        <label>Start Date (YYYY-MM-DD) (optional) if not provided:</label>
+        <input type="text" name="start_date" placeholder="2025-01-15"><br><br>
+
+        <input type="submit" value="Generate Timeline">
+    </form>
+
+    </div>
+    <div class="examples">
+        <p>Need a template? Download our example CSV to get started:</p>
+        <a href="/example" class="btn">Download Example CSV</a>
+    </div>
+    
+    
+</body>
+</html>

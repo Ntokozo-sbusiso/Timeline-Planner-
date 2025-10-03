@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timeline Results</title>
+    <style>
+        .highlight {
+            background-color: #eae0e1;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="title1">
+        <h2>Timeline Output</h2>
+    </div>
+    
+
+    <div id="table-container">
+        {{ tables|safe }}
+    </div>
+
+    <br>
+    <!-- <a href="/download/timeline_output.csv">Download CSV</a> -->
+
+    <script>
+        // Highlight modules longer than 5 days
+        document.addEventListener("DOMContentLoaded", function () {
+            let rows = document.querySelectorAll("table.data tbody tr");
+            rows.forEach(row => {
+                let durationCell = row.cells[3]; // "Duration (days)" column
+                if (durationCell && parseInt(durationCell.innerText) > 5) {
+                    row.classList.add("highlight");
+                }
+            });
+        });
+    </script>
+    <div class="back">
+        <a href="{{ url_for('index') }}">
+    <button>Back to Home</button>
+</a>
+    </div>
+</body>
+</html>

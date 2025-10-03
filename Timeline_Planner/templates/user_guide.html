@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timeline Planner - User Guide</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        h1, h2 { color: #333; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+        table, th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        a { display: inline-block; margin-top: 20px; text-decoration: none; color: blue; }
+    </style>
+</head>
+<body>
+    <h1>Timeline Planner - User Guide</h1>
+
+    <h2>1. Purpose</h2>
+    <p>The Timeline Planner generates a detailed bootcamp or curriculum timeline from a CSV file, skipping weekends, public holidays, and December shutdowns.</p>
+
+    <h2>2. Input Requirements</h2>
+    <h3>Modules CSV File</h3>
+    <table>
+        <tr>
+            <th>Column Header</th>
+            <th>Data Type / Notes</th>
+        </tr>
+        <tr><td>Program Start Date</td><td>YYYY-MM-DD (only first row needed)</td></tr>
+        <tr><td>Dec Shutdown Start</td><td>YYYY-MM-DD (last workday is day before this date)</td></tr>
+        <tr><td>Dec Shutdown End</td><td>YYYY-MM-DD (first workday of new year)</td></tr>
+        <tr><td>Block/Module Name</td><td>Name of the curriculum item</td></tr>
+        <tr><td>Duration</td><td>Number of units</td></tr>
+        <tr><td>Unit</td><td>'days' or 'weeks'</td></tr>
+    </table>
+
+    <h3>Optional Holidays CSV</h3>
+    <p>A single column named <code>date</code> with YYYY-MM-DD dates of additional holidays.</p>
+
+    <h2>3. Using the Timeline Planner</h2>
+    <ol>
+        <li>Go to the home page.</li>
+        <li>Upload the Modules CSV file.</li>
+        <li>(Optional) Upload Holidays CSV file.</li>
+        <li>Enter Start Date if not in CSV.</li>
+        <li>Click Submit to generate timeline.</li>
+    </ol>
+
+    <h2>4. Understanding the Output</h2>
+    <p>The timeline table shows:</p>
+    <ul>
+        <li><strong>Module:</strong> Module name</li>
+        <li><strong>Start Date:</strong> Start date (skipping weekends, holidays, shutdown)</li>
+        <li><strong>End Date:</strong> End date</li>
+        <li><strong>Duration (days):</strong> Total working days</li>
+        <li><strong>Unit:</strong> Original unit (days/weeks)</li>
+    </ul>
+
+    <a href="/">Back to Home</a>
+</body>
+</html>

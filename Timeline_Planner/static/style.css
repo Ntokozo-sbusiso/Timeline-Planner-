@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* full viewport height */
+    margin: 0;
+}
+
+.header h2{
+    text-align: center;
+    font-family:arial;
+    color: rgb(54, 62, 62);
+    width: 100%;
+    background-color:rgb(158, 153, 147) ;
+    height: 50px;
+    
+}
+.header h3{
+    margin-left: 40px;
+}
+.header p{
+    size-adjust: 30px;
+    margin-left: 40px;
+}
+
+.table-container{
+    margin-top: 30px;
+    margin-left: 40px;
+}
+.user_guide {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.examples{
+    margin-top: auto;
+    padding: 2px 0;
+    background-color: rgb(211, 210, 207);
+    size-adjust: 25px;
+    text-align: center;
+    font-family:arial;
+    color: rgb(54, 62, 62);
+    width: 100%;
+    
+    
+}
+.examples a{
+    
+    text-decoration: none;
+    
+}
